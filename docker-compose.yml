@@ -1,0 +1,14 @@
+version: "2"
+services:
+  mapproxy:
+    build: .
+    image: 319858580263.dkr.ecr.eu-central-1.amazonaws.com/mapproxy:latest
+    ports:
+      - "90:80"
+    volumes:
+      - './cache_data:/cache_data'
+  # mapproxy_seed:
+  #   image: 319858580263.dkr.ecr.eu-central-1.amazonaws.com/mapproxy:latest
+  #   volumes:
+  #     - './cache_data:/cache_data'
+  #   command: ["mapproxy-seed","-f","mapproxy.yaml", "-c", "4", "seed.yml"] 

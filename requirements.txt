@@ -1,0 +1,4 @@
+Shapely 
+Pillow 
+MapProxy
+uwsgi
